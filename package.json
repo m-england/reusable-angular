@@ -1,5 +1,5 @@
 {
-  "name": "reusable-angular",
+  "name": "resusable-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,7 +23,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.4",
+    "@angular-devkit/build-angular": "~13.2.5",
     "@angular/cli": "~13.2.4",
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
