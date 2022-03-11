@@ -1,0 +1,23 @@
+<!-- <div *ngFor="let dessert of desserts$ | async">Name: {{ dessert.name }}</div> -->
+
+<!-- <h4>Who Wins?</h4>
+<button class="contrast">Kitten</button>
+<button class="contrast">Dessert</button>
+
+<div *ngFor="let kitten of kittens$ | async">Name: {{ kitten.name }}</div> -->
+
+<div class="split left">
+  <div class="centered">
+    <article *ngFor="let kitten of kittens$ | async">
+      <h2>{{ kitten.name }}</h2>
+    </article>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <article *ngFor="let dessert of desserts$ | async">
+      <h2>{{ dessert.name }}</h2>
+    </article>
+  </div>
+</div>
