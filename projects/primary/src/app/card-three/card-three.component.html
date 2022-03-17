@@ -1,0 +1,9 @@
+<article>
+    <div class="card-container">
+      <div class="image" [style.background-image]="'url(' + imageUrl + ')'"></div>
+      <div class="info-section">
+        <h5>{{ name }}</h5>
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </article>

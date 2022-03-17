@@ -15,31 +15,39 @@ export class MemoryApiService implements InMemoryDbService {
         age: 3,
         favoriteToy: 'yarn',
         spayedOrNeutered: true,
-        imageUrl: '',
-        ugly: 3,
+        imageUrl: './assets/cute-kitten-1.jpg',
+        cuteness: 3,
       },
       {
         name: 'Spot',
         age: 3,
         favoriteToy: 'cardboard box',
         spayedOrNeutered: false,
-        imageUrl: '',
-        ugly: 2,
+        imageUrl: './assets/cute-kitten-2.jpg',
+        cuteness: 2,
       },
       {
         name: 'Mittens',
         age: 50,
         favoriteToy: 'the couch',
         spayedOrNeutered: true,
-        imageUrl: '',
-        ugly: 5,
+        imageUrl: './assets/cute-kitten-3.jpg',
+        cuteness: 5,
       },
     ];
 
     const desserts: Dessert[] = [
       {
+        name: 'Chocolate Lava Cake',
+        imageUrl: './assets/choco-lava.jpg',
+        age: 0,
+        calories: 516,
+        hasChocolate: true,
+        stars: 4,
+      },
+      {
         name: 'Creme Brulee',
-        imageUrl: '',
+        imageUrl: './assets/creme-brulee.jpg',
         age: 0,
         calories: 620,
         hasChocolate: false,
@@ -47,19 +55,11 @@ export class MemoryApiService implements InMemoryDbService {
       },
       {
         name: 'Apple Pie',
-        imageUrl: '',
+        imageUrl: './assets/apple-pie.jpg',
         age: 0,
         calories: 440,
         hasChocolate: false,
         stars: 2,
-      },
-      {
-        name: 'Chocolate Lava Cake',
-        imageUrl: '',
-        age: 0,
-        calories: 516,
-        hasChocolate: true,
-        stars: 4,
       },
     ];
 
