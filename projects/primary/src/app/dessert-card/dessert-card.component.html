@@ -1,0 +1,15 @@
+<article>
+  <div class="card-container">
+    <div
+      class="image"
+      [style.background-image]="'url(' + dessert.imageUrl + ')'"
+    ></div>
+    <div class="info-section">
+      <h5>{{ dessert.name }}</h5>
+      Calories: {{ dessert.calories }}<br />
+      Age: {{ dessert.age }}<br />
+      Contains {{ dessert.hasChocolate ? "" : "no " }}chocolate<br />
+      Stars: {{ dessert.stars }}<br />
+    </div>
+  </div>
+</article>

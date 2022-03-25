@@ -34,6 +34,38 @@ export class MemoryApiService implements InMemoryDbService {
         imageUrl: './assets/cute-kitten-3.jpg',
         cuteness: 5,
       },
+      {
+        name: "d'Artagnan",
+        age: 50,
+        favoriteToy: 'hands',
+        spayedOrNeutered: true,
+        imageUrl: './assets/cute-kitten-4.jpg',
+        cuteness: 4,
+      },
+      {
+        name: 'Cheddar',
+        age: 50,
+        favoriteToy: 'aquarium',
+        spayedOrNeutered: true,
+        imageUrl: './assets/cute-kitten-5.jpg',
+        cuteness: 4,
+      },
+      {
+        name: 'Ham Hock',
+        age: 50,
+        favoriteToy: 'live rodents',
+        spayedOrNeutered: false,
+        imageUrl: './assets/cute-kitten-6.jpg',
+        cuteness: 5,
+      },
+      {
+        name: 'The General',
+        age: 50,
+        favoriteToy: 'hair ties',
+        spayedOrNeutered: true,
+        imageUrl: './assets/cute-kitten-7.jpg',
+        cuteness: 3,
+      },
     ];
 
     const desserts: Dessert[] = [

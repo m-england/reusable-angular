@@ -1,32 +1,19 @@
-<!-- <div *ngFor="let dessert of desserts$ | async">Name: {{ dessert.name }}</div> -->
-
-<!-- <h4>Who Wins?</h4>
-<button class="contrast">Kitten</button>
-<button class="contrast">Dessert</button>
-
-<div *ngFor="let kitten of kittens$ | async">Name: {{ kitten.name }}</div> -->
-
-<div class="split left">
-  <div class="centered">
-    <!-- <app-card-one *ngFor="let kitten of kittens$ | async" [kitten]="kitten"></app-card-one> -->
-    <!-- <app-card-two *ngFor="let kitten of kittens$ | async" [imageUrl]="kitten.imageUrl" [name]="kitten.name"
-        [cuteness]="kitten.cuteness" [age]="kitten.age" [favoriteToy]="kitten.favoriteToy" [spayedOrNeutered]="kitten.spayedOrNeutered"></app-card-two> -->
-    <app-card-three *ngFor="let kitten of kittens$ | async" [imageUrl]="kitten.imageUrl" [name]="kitten.name">
-      Cuteness: {{ kitten.cuteness }}<br/>
-      Age: {{ kitten.age }}<br/>
-      Favorite Toy: {{ kitten.favoriteToy }}<br/>
-      Fixed: {{ kitten.spayedOrNeutered ? 'yes' : 'no' }}<br/>
-    </app-card-three>
+<div class="split-container">
+  <div class="left">
+    <div class="centered">
+      <app-kitten-card
+        *ngIf="kitten$ | async as kitten"
+        [kitten]="kitten"
+      ></app-kitten-card>
+    </div>
   </div>
-</div>
 
-<div class="split right">
-  <div class="centered">
-    <app-card-three *ngFor="let dessert of desserts$ | async" [imageUrl]="dessert.imageUrl" [name]="dessert.name">
-      Calories: {{ dessert.calories }}<br/>
-      Age: {{ dessert.age }}<br/>
-      Contains {{ dessert.hasChocolate ? '' : 'no ' }}chocolate.<br/>
-      Stars: {{ dessert.stars }}<br/>
-    </app-card-three>
+  <div class="right">
+    <div class="centered">
+      <app-dessert-card
+        *ngIf="dessert$ | async as dessert"
+        [dessert]="dessert"
+      ></app-dessert-card>
+    </div>
   </div>
 </div>

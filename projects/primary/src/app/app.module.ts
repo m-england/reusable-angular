@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListContainerComponent } from './list-container/list-container.component';
 import { MemoryApiService } from './utility/memory-api.service';
-import { CardOneComponent } from './card-one/card-one.component';
-import { CardTwoComponent } from './card-two/card-two.component';
-import { CardThreeComponent } from './card-three/card-three.component';
+import { KittenCardComponent } from './kitten-card/kitten-card.component';
+import { DessertCardComponent } from './dessert-card/dessert-card.component';
 
 @NgModule({
-  declarations: [AppComponent, ListContainerComponent, CardOneComponent, CardTwoComponent, CardThreeComponent],
+  declarations: [
+    AppComponent,
+    ListContainerComponent,
+    KittenCardComponent,
+    DessertCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

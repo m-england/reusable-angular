@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { filter, Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Dessert } from '../models/dessert';
 import { Kitten } from '../models/kitten';
 import { DessertsService } from '../services/desserts.service';
@@ -11,8 +11,8 @@ import { KittensService } from '../services/kittens.service';
   styleUrls: ['./list-container.component.scss'],
 })
 export class ListContainerComponent implements OnInit {
-  public kittens$!: Observable<Kitten[]>;
-  public desserts$!: Observable<Dessert[]>;
+  public kitten$!: Observable<Kitten>;
+  public dessert$!: Observable<Dessert>;
 
   constructor(
     private kittensService: KittensService,
@@ -20,7 +20,11 @@ export class ListContainerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.kittens$ = this.kittensService.retrieve();
-    this.desserts$ = this.dessertsService.retrieve();
+    this.kitten$ = this.kittensService.retrieve().pipe(map(this.chooseOne));
+    this.dessert$ = this.dessertsService.retrieve().pipe(map(this.chooseOne));
+  }
+
+  chooseOne<T>(items: T[]): T {
+    return items[Math.floor(Math.random() * items.length)];
   }
 }
