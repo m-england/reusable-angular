@@ -8,16 +8,25 @@
 
 <div class="split left">
   <div class="centered">
-    <article *ngFor="let kitten of kittens$ | async">
-      <h2>{{ kitten.name }}</h2>
-    </article>
+    <!-- <app-card-one *ngFor="let kitten of kittens$ | async" [kitten]="kitten"></app-card-one> -->
+    <!-- <app-card-two *ngFor="let kitten of kittens$ | async" [imageUrl]="kitten.imageUrl" [name]="kitten.name"
+        [cuteness]="kitten.cuteness" [age]="kitten.age" [favoriteToy]="kitten.favoriteToy" [spayedOrNeutered]="kitten.spayedOrNeutered"></app-card-two> -->
+    <app-card-three *ngFor="let kitten of kittens$ | async" [imageUrl]="kitten.imageUrl" [name]="kitten.name">
+      Cuteness: {{ kitten.cuteness }}<br/>
+      Age: {{ kitten.age }}<br/>
+      Favorite Toy: {{ kitten.favoriteToy }}<br/>
+      Fixed: {{ kitten.spayedOrNeutered ? 'yes' : 'no' }}<br/>
+    </app-card-three>
   </div>
 </div>
 
 <div class="split right">
   <div class="centered">
-    <article *ngFor="let dessert of desserts$ | async">
-      <h2>{{ dessert.name }}</h2>
-    </article>
+    <app-card-three *ngFor="let dessert of desserts$ | async" [imageUrl]="dessert.imageUrl" [name]="dessert.name">
+      Calories: {{ dessert.calories }}<br/>
+      Age: {{ dessert.age }}<br/>
+      Contains {{ dessert.hasChocolate ? '' : 'no ' }}chocolate.<br/>
+      Stars: {{ dessert.stars }}<br/>
+    </app-card-three>
   </div>
 </div>

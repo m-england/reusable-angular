@@ -4,5 +4,5 @@ export interface Kitten {
   age: number;
   favoriteToy: string;
   spayedOrNeutered: boolean;
-  ugly: 1 | 2 | 3 | 4 | 5;
+  cuteness: 1 | 2 | 3 | 4 | 5;
 }
