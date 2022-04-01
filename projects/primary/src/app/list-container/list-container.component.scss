@@ -20,12 +20,14 @@ $dessert-color: #e5ffde;
   background-color: $kitten-color;
   flex-grow: 1;
   padding: 3rem;
+  min-width: 50%;
 }
 
 .right {
   background-color: $dessert-color;
   flex-grow: 1;
   padding: 3rem;
+  min-width: 50%;
 }
 
 // .centered {

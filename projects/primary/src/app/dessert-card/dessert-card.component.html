@@ -12,4 +12,9 @@
       Stars: {{ dessert.stars }}<br />
     </div>
   </div>
+  <footer>
+    <button class="secondary" (click)="vote.emit(dessert)">
+      Vote Dessert!
+    </button>
+  </footer>
 </article>

@@ -4,6 +4,7 @@
       <app-kitten-card
         *ngIf="kitten$ | async as kitten"
         [kitten]="kitten"
+        (vote)="onVote($event)"
       ></app-kitten-card>
     </div>
   </div>
@@ -13,6 +14,7 @@
       <app-dessert-card
         *ngIf="dessert$ | async as dessert"
         [dessert]="dessert"
+        (vote)="onVote($event)"
       ></app-dessert-card>
     </div>
   </div>

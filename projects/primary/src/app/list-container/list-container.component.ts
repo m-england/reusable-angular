@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Dessert } from '../models/dessert';
 import { Kitten } from '../models/kitten';
 import { DessertsService } from '../services/desserts.service';
@@ -20,11 +20,17 @@ export class ListContainerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.kitten$ = this.kittensService.retrieve().pipe(map(this.chooseOne));
-    this.dessert$ = this.dessertsService.retrieve().pipe(map(this.chooseOne));
+    this.kitten$ = this.kittensService.randomOne();
+    this.dessert$ = this.dessertsService.randomOne();
   }
 
-  chooseOne<T>(items: T[]): T {
-    return items[Math.floor(Math.random() * items.length)];
+  onVote(chosen: Kitten | Dessert) {
+    if ('cuteness' in chosen) {
+      this.kittensService.vote(chosen);
+      this.kitten$ = this.kittensService.randomOne();
+    } else {
+      this.dessertsService.vote(chosen);
+      this.dessert$ = this.dessertsService.randomOne();
+    }
   }
 }
