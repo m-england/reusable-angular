@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  padding: 0.5rem;
+  justify-content: center;
+  font-style: italic;
+  h1 {
+    margin: 0;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="split-container">
+  <div class="left">
+    <div class="centered">
+      <app-kitten-card
+        *ngIf="kitten$ | async as kitten"
+        [kitten]="kitten"
+        (vote)="onVote(kitten)"
+      ></app-kitten-card>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="centered">
+      <app-dessert-card
+        *ngIf="dessert$ | async as dessert"
+        [dessert]="dessert"
+        (vote)="onVote(dessert)"
+      ></app-dessert-card>
+    </div>
+  </div>
+</div>
