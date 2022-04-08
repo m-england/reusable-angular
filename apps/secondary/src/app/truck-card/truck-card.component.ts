@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Truck } from '../models/truck';
 
 @Component({
   selector: 'app-truck-card',
   templateUrl: './truck-card.component.html',
-  styleUrls: ['./truck-card.component.scss']
+  styleUrls: ['./truck-card.component.scss'],
 })
 export class TruckCardComponent implements OnInit {
+  @Input() truck!: Truck;
 
-  constructor() { }
+  @Output() nextTruck = new EventEmitter<void>();
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

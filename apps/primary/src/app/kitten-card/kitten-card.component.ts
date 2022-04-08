@@ -7,7 +7,6 @@ import { Kitten } from '../models/kitten';
   styleUrls: ['./kitten-card.component.scss'],
 })
 export class KittenCardComponent implements OnInit {
-  @Input() icon!: string;
   @Input() kitten!: Kitten;
   @Output() vote = new EventEmitter<void>();
 

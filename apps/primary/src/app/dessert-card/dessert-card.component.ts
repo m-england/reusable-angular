@@ -7,7 +7,6 @@ import { Dessert } from '../models/dessert';
   styleUrls: ['./dessert-card.component.scss'],
 })
 export class DessertCardComponent implements OnInit {
-  @Input() icon!: string;
   @Input() dessert!: Dessert;
   @Output() vote = new EventEmitter<void>();
 

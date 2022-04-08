@@ -1,1 +1,18 @@
-<p>truck-card works!</p>
+<article>
+  <div class="card-container">
+    <div
+      class="image"
+      [style.background-image]="'url(' + truck.imageUrl + ')'"
+    ></div>
+    <div class="info-section">
+      <h5>{{ truck.name }}</h5>
+      Age: {{ truck.age }}<br />
+      Times Seen: {{ truck.timesSeen }}<br />
+      Average Event Score: {{ truck.averageEventScore }}<br />
+      High Five: {{ truck.receivedHighFiveFromDrive }}<br />
+    </div>
+  </div>
+  <footer>
+    <button class="contrast" (click)="nextTruck.emit()">Next!</button>
+  </footer>
+</article>

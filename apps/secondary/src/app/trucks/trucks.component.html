@@ -1,1 +1,7 @@
-<p>trucks works!</p>
+<div class="main">
+  <app-truck-card
+    *ngIf="trucks$ | async as truck"
+    [truck]="truck"
+    (nextTruck)="onNextTruck()"
+  ></app-truck-card>
+</div>
