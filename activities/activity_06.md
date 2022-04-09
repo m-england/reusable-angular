@@ -1,25 +1,32 @@
-# Activity 6
+# Activity 6 - Template Partials as Inputs
 
 ## Goal
-- Create a shareable library for the common-card-two
-- Reuse it
+- To allow custom footer templates in the reusable card component
 
-#### Catch Up
+### Catch Up
 To catch up to this point in the workshop, run:
   `git checkout activity_05`
 
-#### Steps
-- Create a new library
-    1. `ng g library @libs/card-lib --skip-install`
-    2. Remove the sample `card-lib.component` and `card-lib.service`
-    3. Cleanup the `card-lib.module.ts` and `public-api.ts`
-- Move common-card-two to the new library
-    1. Copy common-card-two from primary app to card-lib
-    2. Fix the module files
-    3. Import the `CardLibModule` into the primary app
-- Update import paths
-    1. Update the Typescript paths in `tsconfig.json` so that `@card-lib` that references the `card-lib`'s directory    
-- Reuse the component in secondary application
-    1. Run the secondary app `ng serve secondary`
-    2. Import the `CardLibModule` into the secondary app
-    3. Replace the `truck-card.component` with our reusable one
+## Summary
+Angular templates can be passed along as inputs to their child components.
+
+## Steps
+1. Add a TemplateRef input property to the common card component
+2. Build a new template in the list-container component for the kitten footer
+    ```html
+      <ng-template #kittenFooter>
+        <span button-description>Do you think this cat is cute?</span>
+        <button class="secondary" (click)="buttonClick.emit()">
+          Vote for Kittens!
+        </button>
+      </ng-template>
+    ```
+3. Pass the new template reference into the `<app-common-card [footerTemplate]="kittenFooter"`
+4. Update the ngTemplateOutput on common-card to use the footerTemplate if provided, or default
+  ` *ngTemplateOutlet="footerTemplate ? footerTemplate : defaultFooter"`
+5. Fix button click in new kittenFooter template
+
+### Reference
+[Angular Conditional Content Projection](https://angular.io/guide/content-projection#conditional-content-projection)
+
+[Angular TemplateRef](https://angular.io/api/core/TemplateRef)

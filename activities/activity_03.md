@@ -1,13 +1,16 @@
-# Activity 3
+# Activity 3 - Single-Slot Content Project
 
 ## Goal
 - Make a reusable component using content projection
 
-#### Catch Up
+### Catch Up
 To catch up to this point in the workshop, run:
   `git checkout activity_02`
 
-#### Steps
+## Summary
+The angular way for wrapping html component inside another component is by using single-slot content projection.  It allows for any html written between the component's opening and closing tags to be rendered inside the child component with the use of ng-content.
+
+## Steps
 - Make a common card using content projection
     1. Create a new component using the angular cli 
       `ng g component common-card-two`
