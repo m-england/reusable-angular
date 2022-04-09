@@ -8,7 +8,7 @@ One of the first steps to creating a reusable component is reducing its local de
 
 ## Steps
 - Kitten Card
-    1. Expand input of desert model by expanding the models properties into inputs ie. (@Input() name: string)
+    1. Expand input of dessert model by expanding the models properties into inputs ie. (@Input() name: string)
     2. Change html to remove kitten model and use newly created properties
     3. Change the list-container component by giving the component the individual inputs from the kitten model
 - Dessert Card

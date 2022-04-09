@@ -5,10 +5,10 @@ import { TrucksService } from '../services/trucks.service';
 
 @Component({
   selector: 'app-trucks',
-  templateUrl: './trucks.component.html',
-  styleUrls: ['./trucks.component.scss'],
+  templateUrl: './trucks-container.component.html',
+  styleUrls: ['./trucks-container.component.scss'],
 })
-export class TrucksComponent implements OnInit {
+export class TrucksContainerComponent implements OnInit {
   trucks$!: Observable<Truck>;
 
   constructor(private trucksService: TrucksService) {}

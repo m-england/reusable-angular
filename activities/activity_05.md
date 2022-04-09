@@ -8,7 +8,7 @@ To catch up to this point in the workshop, run:
   `git checkout activity_04`
 
 ## Summary
-The use of ng-template and ng-container allows content to be displayed when given a structural directive. Examples include using an ngIf to display a default template or and ngFor to render a template multiple times.
+The use of ng-template and ng-container allows content to be displayed when given a structural directive. Examples include using an ngIf to display a default template or an ngFor to render a template multiple times.
 
 ## Steps
 1. Remove the ng-container for multi-slot projection
@@ -16,7 +16,7 @@ The use of ng-template and ng-container allows content to be displayed when give
 3. Add the flavor text and button as content to the defaultFooter template
     * At this step, the template is not rendered or even placed into the dom yet as ng-template is a definition
     * ng-template[4] does not allow structural directives[2]
-4. Insert an element `<ng-container></ng-container>` below the `defaultFooter` template
+4. Insert the tag `<ng-container></ng-container>` within the footer element
     * ng-container can apply structural directives[2]
 5. Add the `*ngTemplateOutlet` structual directive to the `ng-container` and link to defaultFooter template reference
     * ```<ng-container *ngTemplateOutlet="defaultFooter"></ng-container>```

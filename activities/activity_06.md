@@ -11,7 +11,7 @@ To catch up to this point in the workshop, run:
 Angular templates can be passed along as inputs to their child components.
 
 ## Steps
-1. Add a TemplateRef input property to the common card component
+1. Add a TemplateRef<any> input property to the common card component
 2. Build a new template in the list-container component for the kitten footer
     ```html
       <ng-template #kittenFooter>

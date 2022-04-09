@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TrucksComponent } from './trucks/trucks.component';
 import { TruckCardComponent } from './truck-card/truck-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { MemoryApiService } from './utility/memory-api.service';
+import { TrucksContainerComponent } from './trucks-container/trucks-container.component';
 
 @NgModule({
-  declarations: [AppComponent, TrucksComponent, TruckCardComponent],
+  declarations: [AppComponent, TrucksContainerComponent, TruckCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
