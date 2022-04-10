@@ -1,0 +1,19 @@
+<article>
+  <div class="card-container">
+    <div class="image" [style.background-image]="'url(' + imageUrl + ')'"></div>
+    <div class="info-section">
+      <h5>{{ name }}</h5>
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <footer>
+    <ng-container
+      *ngTemplateOutlet="footerTemplate ?? defaultFooter"
+    ></ng-container>
+  </footer>
+</article>
+
+<ng-template #defaultFooter>
+  <ng-content select="[flavorText]"></ng-content>
+  <button class="contrast" (click)="vote.emit()">Vote!</button>
+</ng-template>

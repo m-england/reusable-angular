@@ -1,0 +1,23 @@
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  width: 40%;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.info-section {
+  width: 60%;
+  padding: 1rem;
+}
+
+h5 {
+  margin-bottom: 0.2em;
+}
+
+footer {
+  text-align: center;
+}
