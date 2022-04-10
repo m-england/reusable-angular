@@ -7,7 +7,9 @@
     </div>
   </div>
   <footer>
-    <ng-container *ngTemplateOutlet="defaultFooter"></ng-container>
+    <ng-container
+      *ngTemplateOutlet="footerTemplate ?? defaultFooter"
+    ></ng-container>
   </footer>
 </article>
 

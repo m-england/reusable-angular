@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  TemplateRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-common-card-two',
@@ -8,6 +15,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class CommonCardTwoComponent implements OnInit {
   @Input() name!: string;
   @Input() imageUrl!: string;
+  @Input() footerTemplate?: TemplateRef<any>;
 
   @Output() vote = new EventEmitter<void>();
 

@@ -5,13 +5,20 @@
         *ngIf="kitten$ | async as kitten"
         [name]="kitten.name"
         [imageUrl]="kitten.imageUrl"
+        [footerTemplate]="kittenFooter"
         (vote)="onVote(kitten)"
       >
         Cuteness: {{ kitten.cuteness }}<br />
         Age: {{ kitten.age }}<br />
         Favorite Toy: {{ kitten.favoriteToy }}<br />
         Fixed: {{ kitten.spayedOrNeutered }}<br />
-        <span flavorText>Look at that kitten face!</span>
+
+        <ng-template #kittenFooter>
+          <span flavorText>Do you think this cat is cute?</span>
+          <button class="secondary" (click)="onVote(kitten)">
+            Vote for Kittens!
+          </button>
+        </ng-template>
       </app-common-card-two>
     </div>
   </div>
@@ -22,13 +29,20 @@
         *ngIf="dessert$ | async as dessert"
         [name]="dessert.name"
         [imageUrl]="dessert.imageUrl"
+        [footerTemplate]="dessertFooter"
         (vote)="onVote(dessert)"
       >
         Calories: {{ dessert.calories }}<br />
         Age: {{ dessert.age }}<br />
         Contains {{ dessert.hasChocolate ? "" : "no " }}chocolate<br />
         Stars: {{ dessert.stars }}<br />
-        <span flavorText>Who can pass on this dessert?</span>
+
+        <ng-template #dessertFooter>
+          <span flavorText>This looks delicious!</span>
+          <button class="secondary" (click)="onVote(dessert)">
+            Vote for Desserts!
+          </button>
+        </ng-template>
       </app-common-card-two>
     </div>
   </div>
