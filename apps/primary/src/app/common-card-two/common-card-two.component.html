@@ -7,7 +7,11 @@
     </div>
   </div>
   <footer>
-    <ng-content select="[flavorText]"></ng-content>
-    <button class="contrast" (click)="vote.emit()">Vote!</button>
+    <ng-container *ngTemplateOutlet="defaultFooter"></ng-container>
   </footer>
 </article>
+
+<ng-template #defaultFooter>
+  <ng-content select="[flavorText]"></ng-content>
+  <button class="contrast" (click)="vote.emit()">Vote!</button>
+</ng-template>
