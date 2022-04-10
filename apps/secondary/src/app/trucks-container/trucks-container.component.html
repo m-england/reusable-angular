@@ -1,7 +1,22 @@
 <div class="main">
-  <app-truck-card
+  <app-common-card-two
     *ngIf="trucks$ | async as truck"
-    [truck]="truck"
-    (nextTruck)="onNextTruck()"
-  ></app-truck-card>
+    [name]="truck.name"
+    [imageUrl]="truck.imageUrl"
+    [footerTemplate]="trucksFooter"
+  >
+    Age: {{ truck.age }}<br />
+    Times Seen: {{ truck.timesSeen }}<br />
+    Average Event Score: {{ truck.averageEventScore }}<br />
+    {{
+      truck.receivedHighFiveFromDrive
+        ? "I have high fived this driver"
+        : "This driver has not high fived me"
+    }}<br />
+
+    <ng-template #trucksFooter>
+      <span flavorText>Radical!</span>
+      <button class="secondary" (click)="onNextTruck()">More Trucks!</button>
+    </ng-template>
+  </app-common-card-two>
 </div>

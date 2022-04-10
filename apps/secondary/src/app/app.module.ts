@@ -1,16 +1,15 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CardLibModule } from '@libs/card-lib';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TruckCardComponent } from './truck-card/truck-card.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { MemoryApiService } from './utility/memory-api.service';
 import { TrucksContainerComponent } from './trucks-container/trucks-container.component';
+import { MemoryApiService } from './utility/memory-api.service';
 
 @NgModule({
-  declarations: [AppComponent, TrucksContainerComponent, TruckCardComponent],
+  declarations: [AppComponent, TrucksContainerComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -18,6 +17,7 @@ import { TrucksContainerComponent } from './trucks-container/trucks-container.co
     HttpClientInMemoryWebApiModule.forRoot(MemoryApiService, {
       delay: 200,
     }),
+    CardLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
