@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Dessert } from '../models/dessert';
 
 @Component({
   selector: 'app-dessert-card',
@@ -7,7 +6,13 @@ import { Dessert } from '../models/dessert';
   styleUrls: ['./dessert-card.component.scss'],
 })
 export class DessertCardComponent implements OnInit {
-  @Input() dessert!: Dessert;
+  @Input() name!: string;
+  @Input() imageUrl!: string;
+  @Input() age!: number;
+  @Input() calories!: number;
+  @Input() hasChocolate!: boolean;
+  @Input() stars!: 1 | 2 | 3 | 4;
+
   @Output() vote = new EventEmitter<void>();
 
   constructor() {}

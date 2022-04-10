@@ -3,7 +3,12 @@
     <div class="centered">
       <app-kitten-card
         *ngIf="kitten$ | async as kitten"
-        [kitten]="kitten"
+        [name]="kitten.name"
+        [imageUrl]="kitten.imageUrl"
+        [age]="kitten.age"
+        [favoriteToy]="kitten.favoriteToy"
+        [spayedOrNeutered]="kitten.spayedOrNeutered"
+        [cuteness]="kitten.cuteness"
         (vote)="onVote(kitten)"
       ></app-kitten-card>
     </div>
@@ -13,7 +18,12 @@
     <div class="centered">
       <app-dessert-card
         *ngIf="dessert$ | async as dessert"
-        [dessert]="dessert"
+        [name]="dessert.name"
+        [imageUrl]="dessert.imageUrl"
+        [age]="dessert.age"
+        [calories]="dessert.calories"
+        [hasChocolate]="dessert.hasChocolate"
+        [stars]="dessert.stars"
         (vote)="onVote(dessert)"
       ></app-dessert-card>
     </div>

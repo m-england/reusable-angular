@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Kitten } from '../models/kitten';
 
 @Component({
   selector: 'app-kitten-card',
@@ -7,7 +6,13 @@ import { Kitten } from '../models/kitten';
   styleUrls: ['./kitten-card.component.scss'],
 })
 export class KittenCardComponent implements OnInit {
-  @Input() kitten!: Kitten;
+  @Input() name!: string;
+  @Input() imageUrl!: string;
+  @Input() age!: number;
+  @Input() favoriteToy!: string;
+  @Input() spayedOrNeutered!: boolean;
+  @Input() cuteness!: 1 | 2 | 3 | 4 | 5;
+
   @Output() vote = new EventEmitter<void>();
 
   constructor() {}
