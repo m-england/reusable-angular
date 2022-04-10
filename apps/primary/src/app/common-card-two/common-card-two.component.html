@@ -7,6 +7,7 @@
     </div>
   </div>
   <footer>
+    <ng-content select="[flavorText]"></ng-content>
     <button class="contrast" (click)="vote.emit()">Vote!</button>
   </footer>
 </article>
