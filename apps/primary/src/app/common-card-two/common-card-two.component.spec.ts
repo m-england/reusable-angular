@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DessertCardComponent } from './dessert-card.component';
+import { CommonCardTwoComponent } from './common-card-two.component';
 
-describe('DessertCardComponent', () => {
-  let component: DessertCardComponent;
-  let fixture: ComponentFixture<DessertCardComponent>;
+describe('CommonCardTwoComponent', () => {
+  let component: CommonCardTwoComponent;
+  let fixture: ComponentFixture<CommonCardTwoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DessertCardComponent ]
+      declarations: [ CommonCardTwoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DessertCardComponent);
+    fixture = TestBed.createComponent(CommonCardTwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

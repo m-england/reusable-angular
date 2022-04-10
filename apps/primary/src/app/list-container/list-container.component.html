@@ -1,31 +1,33 @@
 <div class="split-container">
   <div class="left">
     <div class="centered">
-      <app-kitten-card
+      <app-common-card-two
         *ngIf="kitten$ | async as kitten"
         [name]="kitten.name"
         [imageUrl]="kitten.imageUrl"
-        [age]="kitten.age"
-        [favoriteToy]="kitten.favoriteToy"
-        [spayedOrNeutered]="kitten.spayedOrNeutered"
-        [cuteness]="kitten.cuteness"
         (vote)="onVote(kitten)"
-      ></app-kitten-card>
+      >
+        Cuteness: {{ kitten.cuteness }}<br />
+        Age: {{ kitten.age }}<br />
+        Favorite Toy: {{ kitten.favoriteToy }}<br />
+        Fixed: {{ kitten.spayedOrNeutered }}<br />
+      </app-common-card-two>
     </div>
   </div>
 
   <div class="right">
     <div class="centered">
-      <app-dessert-card
+      <app-common-card-two
         *ngIf="dessert$ | async as dessert"
         [name]="dessert.name"
         [imageUrl]="dessert.imageUrl"
-        [age]="dessert.age"
-        [calories]="dessert.calories"
-        [hasChocolate]="dessert.hasChocolate"
-        [stars]="dessert.stars"
         (vote)="onVote(dessert)"
-      ></app-dessert-card>
+      >
+        Calories: {{ dessert.calories }}<br />
+        Age: {{ dessert.age }}<br />
+        Contains {{ dessert.hasChocolate ? "" : "no " }}chocolate<br />
+        Stars: {{ dessert.stars }}<br />
+      </app-common-card-two>
     </div>
   </div>
 </div>
